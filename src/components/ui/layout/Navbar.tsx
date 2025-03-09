@@ -48,7 +48,9 @@ export default function Navbar() {
                         <Button variant="outline" className="md:hidden">☰</Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
-                        {[{ name: "Home", path: "/" }, { name: "About Us", path: "/about" }, { name: "All Bicycle", path: "all-bicycle" }].map((item) => (
+                        {[{ name: "Home", path: "/" },
+                         { name: "About Us", path: "/about" }, 
+                         { name: "All Bicycle", path: "all-bicycle" }].map((item) => (
                             <DropdownMenuItem key={item.path}>
                                 <Link to={item.path}>{item.name}</Link>
                             </DropdownMenuItem>

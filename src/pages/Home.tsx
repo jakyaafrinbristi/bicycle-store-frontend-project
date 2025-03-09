@@ -1,8 +1,13 @@
 import Banner from "@/components/Banner"
+import { AboutUs } from "./AboutUs"
 
 
 export const Home = () => {
   return (
-<Banner></Banner>
+    <div>
+      <Banner></Banner>
+      <AboutUs></AboutUs>
+    </div>
+
   )
 }
