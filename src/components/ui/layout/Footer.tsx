@@ -1,4 +1,5 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome, FaInfoCircle, FaPhoneAlt, FaServicestack } from 'react-icons/fa'; // Social Media Icons
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaHome, FaInfoCircle, FaPhoneAlt } from 'react-icons/fa'; // Social Media Icons
+import { Link } from 'react-router';
 
 export function Footer() {
   return (
@@ -6,23 +7,23 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center">
         {/* Logo Section */}
         <div className="text-center lg:text-left mb-6 lg:mb-0">
-          <span className="font-bold text-2xl">TaskMaster</span>
+          <span className="font-bold text-2xl">Bicycle
+          Store</span>
         </div>
 
         {/* Links Section */}
         <div className="flex flex-wrap justify-center gap-8 mb-6 lg:mb-0">
-          <a href="/" className="hover:text-teal-400 flex items-center gap-2">
+          <Link to="/" className="hover:text-teal-400 flex items-center gap-2">
             <FaHome /> Home
-          </a>
-          <a href="/about" className="hover:text-teal-400 flex items-center gap-2">
-            <FaInfoCircle/> About
-          </a>
-          <a href="/contact" className="hover:text-teal-400 flex items-center gap-2">
-            <FaPhoneAlt /> Contact
-          </a>
-          <a href="/services" className="hover:text-teal-400 flex items-center gap-2">
-            <FaServicestack /> Services
-          </a>
+          </Link>
+          <Link to="about" className="hover:text-teal-400 flex items-center gap-2">
+          <FaInfoCircle/> About
+          </Link>
+          <Link to="contact" className="hover:text-teal-400 flex items-center gap-2">
+          <FaPhoneAlt /> Contact Us
+          </Link>
+       
+         
         </div>
 
         {/* Social Media Section */}
@@ -41,7 +42,7 @@ export function Footer() {
 
       {/* Bottom Section */}
       <div className="border-t border-teal-600 text-center py-4">
-        <p className="text-sm">© 2025 TaskMaster. All rights reserved.</p>
+        <p className="text-sm">© 2025 Bicycle Store. All rights reserved.</p>
       </div>
     </footer>
   );

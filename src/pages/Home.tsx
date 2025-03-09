@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner"
 
 
-export const Task = () => {
+export const Home = () => {
   return (
 <Banner></Banner>
   )
