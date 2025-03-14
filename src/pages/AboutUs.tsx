@@ -25,8 +25,8 @@ export const AboutUs = () => {
       <div className="flex flex-col justify-center text-center lg:text-left">
         <h1 className="font-bold text-2xl underline mb-5 text-center">About Us</h1>
         <p className="max-w-3xl mx-auto lg:mx-0 px-6 font-semibold text-gray-500">
-          Welcome to Bicycle Store, your one-stop destination for premium bicycles and accessories. 
-          We are passionate about cycling and committed to providing top-quality bikes for riders of all levels.
+        Welcome to Bicycle Store, your one-stop destination for premium bicycles and accessories. We are passionate about cycling and committed to providing top-quality bikes for riders of all levels.
+         Our mission is to inspire a healthier and more sustainable lifestyle through cycling.
         </p>
       </div>
       

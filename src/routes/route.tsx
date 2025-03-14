@@ -9,6 +9,7 @@ import { Home } from "@/pages/Home";
 import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
 import { createBrowserRouter } from "react-router";
+import { ProtectecRoute } from "./ProtectecRoute";
 
 const routes =createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const routes =createBrowserRouter([
             },
             {
                 path:"all-bicycle",
-                element:<AllBicycle></AllBicycle>
+                element:<ProtectecRoute><AllBicycle></AllBicycle></ProtectecRoute>
             },
             {
                 path:"contact",

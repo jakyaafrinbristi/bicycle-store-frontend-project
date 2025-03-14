@@ -23,7 +23,7 @@ export default function Banner() {
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000 }}
-        className="w-full h-[700px]"
+        className="w-full h-[600px]"
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>

@@ -3,8 +3,15 @@ import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@/components/ui/dropdown-menu";
 import Logo from "@/assets/Logo";
+import { useAppDispatch } from "@/redux/hooks";
+import { logout } from "@/redux/features/auth/authSlice";
 
 export default function Navbar() {
+    const dispatch = useAppDispatch()
+    const handleLogout =()=>{
+
+        dispatch(logout())
+    }
     return (
         <nav className="max-w-7xl mt-5 mx-auto h-16 flex items-center justify-between px-5 bg-white shadow-lg dark:bg-gray-900 dark:shadow-xl">
             {/* Logo */}
@@ -34,6 +41,9 @@ export default function Navbar() {
                         Login
                     </Button>
                 </Link>
+                <Button  onClick={handleLogout} variant="default" className="px-4 py-2 rounded-md bg-teal-500 text-white hover:bg-teal-600">
+                        LogOut
+                    </Button>
                 
                 {/* Register Button */}
                 <Link to="/register">
