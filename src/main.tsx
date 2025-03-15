@@ -8,6 +8,7 @@ import { RouterProvider } from 'react-router'
 import routes from './routes/route.tsx'
 import { ThemeProvider } from './providers/theme-provider.tsx'
 import { PersistGate } from 'redux-persist/integration/react'
+import {Toaster} from 'sonner'
  
 
 createRoot(document.getElementById('root')!).render(
@@ -18,6 +19,7 @@ createRoot(document.getElementById('root')!).render(
     
     <RouterProvider router={routes}/>
       </PersistGate>
+   <Toaster></Toaster>
       </Provider>
       </ThemeProvider>
   </StrictMode>,
