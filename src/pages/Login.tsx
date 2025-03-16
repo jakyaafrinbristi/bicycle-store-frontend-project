@@ -57,7 +57,7 @@ toast.success('Logged In', {id : toastId , duration:1000})
   }
   return (
  <div className="grid grid-cols-1 lg:grid-cols-2 mt-20 container mx-auto">
-  <div className="w-full max-w-md ml-8">
+  <div className="w-full max-w-md ml-8 hidden xl:block">
 				<Lottie animationData={loginAnimation} loop={true} />
 				</div>
      <form onSubmit={handleSubmit(onSubmit)} className=" w-full max-w-lg mx-auto p-6 space-y-6 border rounded-lg shadow-md">

@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner"
 import { AboutUs } from "./AboutUs"
+import FeaturedBicycles from "./FeaturedBicycles"
 
 
 export const Home = () => {
@@ -7,6 +8,7 @@ export const Home = () => {
     <div>
       <Banner></Banner>
       <AboutUs></AboutUs>
+ <FeaturedBicycles></FeaturedBicycles>
     </div>
 
   )

@@ -20,6 +20,7 @@ export const Register = () => {
   const navigate= useNavigate();
 
   const {register,handleSubmit} = useForm<FormValues>();
+  
   const [registerUser] =useRegisterMutation();
   const onSubmit :SubmitHandler<FormValues>=async(data)=>{
     const toastId = toast.loading("Registering...");
@@ -100,7 +101,7 @@ export const Register = () => {
 				<Link to='/login' className="hover:underline dark:text-violet-600">Sign In</Link>.
 			</p>
     </form>
-    <div className="w-full max-w-md ml-8">
+    <div className="w-full max-w-md ml-8 hidden xl:block">
           <Lottie animationData={registerAnimation} loop={true} />
           </div>
    </div>
