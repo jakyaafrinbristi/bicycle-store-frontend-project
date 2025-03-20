@@ -1,13 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { useGetAllProductsQuery } from "@/redux/features/products/productApi"
+import { useGetAllProductQuery } from "@/redux/features/products/productApi";
+
 import { IProduct } from "@/Types/types";
 import { Link } from "react-router";
 
 
 const FeaturedBicycles = () => {
 
-    const {data,isLoading} =useGetAllProductsQuery(undefined);
+    const {data,isLoading} =useGetAllProductQuery(undefined);
      console.log({data,isLoading})
       if(isLoading){
            return <p>Loading</p>

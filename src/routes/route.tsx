@@ -10,6 +10,7 @@ import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
 import { createBrowserRouter } from "react-router";
 import { ProtectecRoute } from "./ProtectecRoute";
+import ProductDetails from "@/components/ProductDetails";
 
 const routes =createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const routes =createBrowserRouter([
             {
                 path:"contact",
                 element:<Contact></Contact>
+            },
+            {
+                path:"bicycle/:id",
+                element:<ProductDetails></ProductDetails>
             },
 
         ]
