@@ -8,9 +8,17 @@ import Contact from "@/pages/Contact";
 import { Home } from "@/pages/Home";
 import { Login } from "@/pages/Login";
 import { Register } from "@/pages/Register";
+
 import { createBrowserRouter } from "react-router";
-import { ProtectecRoute } from "./ProtectecRoute";
+// import { ProtectecRoute } from "./ProtectecRoute";
 import ProductDetails from "@/components/ProductDetails";
+
+import { ProtectecRoute } from "./ProtectecRoute";
+import MainLayout from "@/components/ui/layout/MainLayout";
+import { routesGenerator } from "@/utils/routeGenerator";
+import { adminPaths } from "./admin.routes";
+import { customerPaths } from "./customer.routes";
+
 
 const routes =createBrowserRouter([
     {
@@ -27,7 +35,7 @@ const routes =createBrowserRouter([
             },
             {
                 path:"all-bicycle",
-                element:<ProtectecRoute><AllBicycle></AllBicycle></ProtectecRoute>
+                element:<AllBicycle></AllBicycle>
             },
             {
                 path:"contact",
@@ -40,6 +48,17 @@ const routes =createBrowserRouter([
 
         ]
     },
+    {
+        path: "/admin",
+        element:<ProtectecRoute role="admin"> <MainLayout></MainLayout></ProtectecRoute>,
+        children:routesGenerator(adminPaths)
+      },
+    {
+        path: "/customer",
+        element:<ProtectecRoute role="customer"> <MainLayout></MainLayout></ProtectecRoute>,
+        children:routesGenerator(customerPaths)
+      },
+    
     {
         path:"/login",
         element:<Login></Login>

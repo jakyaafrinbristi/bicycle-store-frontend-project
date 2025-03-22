@@ -18,10 +18,10 @@ import loginAnimation from "../json/Login.json"
 
 export const Login = () => {
   const navigate=useNavigate()
-  const location = useLocation();
+  // const location = useLocation();
   
   
-  const from = location.state?.pathname || "/";
+  // const from = location.state?.pathname || "/";
   console.log({location})
   const dispatch =useAppDispatch()
   const {register,handleSubmit} = useForm({
@@ -31,23 +31,25 @@ export const Login = () => {
     },
   });
   const [login]=useLoginMutation()
-  // console.log(" data => ",data)
+  console.log(login)
   // console.log(" error=> ",error)
   const onSubmit =async(data :FieldValues)=>{
     const toastId=toast.loading('Logging in')
-    // console.log(data)
+    console.log(data)
 try{
   const userInfo ={
     email:data.email,
     password:data.password,
   }
 const res=await login(userInfo).unwrap();
+console.log("res",res)
 const user =verifyToken(res.data);
 console.log(user)
 dispatch(setUser({user:user,token:res.data}))
 toast.success('Logged In', {id : toastId , duration:1000})
 
-  navigate(from, { state: location.state?.state, replace: true });
+  // navigate(from, { state: location.state?.state, replace: true });
+  navigate("/");
 
 
 // console.log(res)

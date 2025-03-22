@@ -54,7 +54,9 @@ export default function Navbar() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
-                    <Link to="/dashboard">Dashboard</Link>
+                  <Link to={user.role === 'admin' ? '/admin/dashboard' : '/customer/dashboard'}>
+  Dashboard
+</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem onClick={handleLogout}>Logout</DropdownMenuItem>
                 </DropdownMenuContent>

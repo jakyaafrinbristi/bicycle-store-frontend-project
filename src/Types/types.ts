@@ -18,3 +18,11 @@ export interface IProduct {
     rating:number
  
 }
+export interface IUser {
+  _id: string;
+  name: string;
+  email: string;
+  role: 'admin' | 'customer';  
+  address?: string;
+  city?: string;
+}
