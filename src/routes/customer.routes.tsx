@@ -7,6 +7,15 @@ export const customerPaths = [
         path:'dashboard',
         element:<CustomerDAshboard></CustomerDAshboard>
     },
+    {
+            name:'Admin Dashboard',
+            children:[
+         
+                
+               
+            ]
+          },
+        
    
    
      

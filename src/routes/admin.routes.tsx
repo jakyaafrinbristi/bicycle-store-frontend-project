@@ -1,6 +1,8 @@
 
+import AdminDasboard from "@/pages/Admin/AdminDAshboard/AdminDasboard";
 import ManageOrder from "@/pages/Admin/AdminDAshboard/ManageOrder";
-import ManageProduct from "@/pages/Admin/AdminDAshboard/ManageProduct";
+import ManageProducts from "@/pages/Admin/AdminDAshboard/ManageProducts";
+
 import ManageUser from "@/pages/Admin/AdminDAshboard/ManageUsers";
 
 
@@ -11,7 +13,12 @@ import ManageUser from "@/pages/Admin/AdminDAshboard/ManageUsers";
 
 
 export const  adminPaths =[
-  
+    {
+        name: 'Dashboard',
+        path: 'dashboard',
+        element:<AdminDasboard></AdminDasboard>
+    
+      },
    
       {
         name:'Admin Dashboard',
@@ -24,7 +31,7 @@ export const  adminPaths =[
             {
                 name:'Manage Product',
                 path:'product',
-                element:<ManageProduct></ManageProduct>
+                element:<ManageProducts></ManageProducts>
             },
             {
                 name:'Manage Order',

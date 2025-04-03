@@ -48,7 +48,7 @@ const routes =createBrowserRouter([
 
         ]
     },
-    {
+    {    
         path: "/admin",
         element:<ProtectecRoute role="admin"> <MainLayout></MainLayout></ProtectecRoute>,
         children:routesGenerator(adminPaths)

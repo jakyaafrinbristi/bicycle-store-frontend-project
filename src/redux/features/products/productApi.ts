@@ -6,6 +6,7 @@ const productApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getAllProduct: builder.query({
         query: () => '/product',
+        providesTags: ['Products'] 
       }),
     getAllProductsPagination: builder.query<TResponseRedux<IProduct[]>, { searchTerm?: string; category?: string; page?: number; limit?: number }>({
       query: ({ searchTerm, category, page = 1, limit = 6 }) => {
@@ -15,6 +16,7 @@ const productApi = baseApi.injectEndpoints({
         return {
           url: `/product${queryString}`,
           method: "GET",
+
         };
       },
       transformResponse: (response: TResponseRedux<IProduct[]>) => {
@@ -25,7 +27,35 @@ const productApi = baseApi.injectEndpoints({
     getProductById: builder.query({
       query: (id) => `/product/${id}`,
     }),
+
+createProduct:builder.mutation({
+  query:(product)=>({
+    
+    url:'/product',
+    method:'POST',
+    body:product,
+  }),
+  invalidatesTags: ['Products']
+}),
+updateProduct: builder.mutation({
+  query: (product) => ({
+    url: `/product/${product._id}`,
+    method: 'PUT',
+    body: product,
+  }),
+  invalidatesTags: ['Products']
+}),
+deleteProduct:builder.mutation({
+  query:(id)=>({
+    url:`/product/${id}`,
+    method:'DELETE',
+
+  }),
+  invalidatesTags: ['Products']
+}),
+
   }),
 });
 
-export const { useGetAllProductQuery, useGetProductByIdQuery,useGetAllProductsPaginationQuery } = productApi;
+export const { useGetAllProductQuery, useGetProductByIdQuery,useGetAllProductsPaginationQuery,
+  useCreateProductMutation,useDeleteProductMutation,useUpdateProductMutation } = productApi;
