@@ -1,14 +1,23 @@
 import { useGetProductByIdQuery } from "@/redux/features/products/productApi";
 
-import { useParams } from "react-router"
+import { useNavigate, useParams } from "react-router"
 import { Button } from "@/components/ui/button";
+
+import { toast } from "sonner";
 // import { toast } from "sonner";
 
 
 export default function ProductDetails() {
     const {id} = useParams();
+    const navigate = useNavigate();
     const {data, isLoading}=useGetProductByIdQuery(id);
     // console.log(product)
+    const handleBuyNow = () => {
+      navigate("/checkout", {
+        state: { product },
+      });
+      toast.success("Proceeding to checkout!");
+    };
     if(isLoading){
       // toast.loading("Loading Product Dtreails")
       return <p className="text-center text-lg">Loading....</p>
@@ -20,6 +29,7 @@ export default function ProductDetails() {
     }
 //  toast.dismiss();
     const product = data.data;
+    // console.log(product)
   return (
     <div className="container mx-auto px-6 py-12">
 <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6  space-y-6">
@@ -30,9 +40,11 @@ export default function ProductDetails() {
   <div className="text-center">
     <h1 className="text-3xl font-bold text-gray-800 mb-2">{product.name}</h1>
     <h2 className="text-xl text-gray-600 mb-1">Brand: <span className="font-semibold">{product.brand}</span> </h2>
+    <p>{product.stock}</p>
     <span className="inline-block bg-teal-100 text-teal-700 px-4 py-1 text-sm font-medium rounded-full mb-4 mt-2">{product.category}</span>
  <p className="text-2xl font-semibold text-gray-900">Price: <span className="text-teal-600">{product.price}</span></p>
- <Button className="bg-teal-600 hover:bg-teal-500 px-6 py-2 text-lg mt-5">Buy Now</Button>
+ <Button  onClick={handleBuyNow}
+  className="bg-teal-600 hover:bg-teal-500 px-6 py-2 text-lg mt-5">Buy Now</Button>
   </div>
 
 </div>

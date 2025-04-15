@@ -28,7 +28,7 @@ export default function Navbar() {
               { name: "Home", path: "/" },
               { name: "About Us", path: "/about" },
               { name: "All Bicycle", path: "/all-bicycle" },
-              { name: "Contact Us", path: "/contact" },
+              { name: "Order", path: "/order" },
             ].map((item) => (
               <Link
                 key={item.path}

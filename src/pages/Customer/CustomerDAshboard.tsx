@@ -1,7 +1,5 @@
-import React from 'react'
-
-export default function CustomerDAshboard() {
-  return (
-    <div>CustomerDAshboard</div>
-  )
-}
+export default function CustomerDashboard() {
+    return (
+      <div>CustomerDashboard</div>
+    )
+  }
