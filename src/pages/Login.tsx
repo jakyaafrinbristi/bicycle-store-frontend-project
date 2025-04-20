@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useLoginMutation } from "@/redux/features/auth/authApi";
-import { setUser } from "@/redux/features/auth/authSlice";
+import { setUser, TUser } from "@/redux/features/auth/authSlice";
 import { useAppDispatch } from "@/redux/hooks";
 import { verifyToken } from "@/utils/verifyToken";
 
@@ -18,7 +18,7 @@ import loginAnimation from "../json/Login.json"
 
 export const Login = () => {
   const navigate=useNavigate()
-  // const location = useLocation();
+  const location = useLocation();
   
   
   // const from = location.state?.pathname || "/";
@@ -43,9 +43,9 @@ try{
   }
 const res=await login(userInfo).unwrap();
 console.log("res",res)
-const user =verifyToken(res.data);
+const user = verifyToken(res.data.accessToken) as TUser;
 console.log(user)
-dispatch(setUser({user:user,token:res.data}))
+dispatch(setUser({user:user, token:res.data.accessToken}))
 toast.success('Logged In', {id : toastId , duration:1000})
 
   // navigate(from, { state: location.state?.state, replace: true });

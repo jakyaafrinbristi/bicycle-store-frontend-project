@@ -32,12 +32,18 @@ export default function ManageOrder() {
     toast.error("Failed to update status.");
   }
  };
- if (isLoading)
+ if (isLoading) {
   return (
-    <div className="flex justify-center items-center h-40">
-      <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-teal-500 border-solid"></div>
+    <div className="flex justify-center items-center h-[60vh]">
+      <div className="relative">
+        <div className="h-16 w-16 rounded-full border-4 border-dashed border-teal-500 animate-spin"></div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="h-6 w-6 bg-teal-500 rounded-full shadow-md"></div>
+        </div>
+      </div>
     </div>
   );
+}
   return (
     <div className="p-4">
       <h2 className="text-2xl font-semibold mb-4">All Orders</h2>
@@ -56,7 +62,7 @@ export default function ManageOrder() {
           {data?.data?.map((order: IOrder) => (
          
             <TableRow key={order._id}>
-              <TableCell>{order.user._id}</TableCell>
+              <TableCell>{order.user.email}</TableCell>
               <TableCell>
                 {order.products.map((p) => (
                   <div key={p._id}>

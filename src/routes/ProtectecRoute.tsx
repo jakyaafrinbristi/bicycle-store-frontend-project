@@ -6,7 +6,7 @@ import { Navigate } from "react-router";
 
 type ProtectecRouteProps = {
   children: ReactNode;
-  role: string; 
+  role?:  string ; 
 };
 
 export const ProtectecRoute = ({ children, role }: ProtectecRouteProps) => {

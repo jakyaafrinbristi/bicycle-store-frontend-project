@@ -11,7 +11,7 @@ import { toast } from "sonner";
 
 
 export default function ManageProducts() {
-  const {data} =useGetAllProductQuery(undefined);
+  const {data,isLoading} =useGetAllProductQuery(undefined);
   // console.log(data);
   const [createProduct, {isLoading: isCreating}] =useCreateProductMutation();
   const [updateProduct, { isLoading: isUpdating }] = useUpdateProductMutation();
@@ -110,7 +110,18 @@ export default function ManageProducts() {
   };
 
 
-
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center h-[60vh]">
+        <div className="relative">
+          <div className="h-16 w-16 rounded-full border-4 border-dashed border-teal-500 animate-spin"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="h-6 w-6 bg-teal-500 rounded-full shadow-md"></div>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="admin-dashboard p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Product Management</h1>

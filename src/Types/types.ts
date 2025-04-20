@@ -9,17 +9,31 @@ export interface IProduct {
     imageUrl: string
   }
 
+  export interface Transaction {
+    id: string;
+    transactionStatus: string | null;
+    bank_status: string;
+    date_time: string;
+    method: string;
+    sp_code: string;
+    sp_message: string;
+  }
   export interface IOrderProduct {
     _id: string;
     quantity: number;
     product: IProduct;
   }
   export interface IOrder {
+    transaction: Transaction;
     _id: string;
-    user: string; 
+    user: {
+      _id: string;
+      name: string;
+      email: string;
+    };
     products: IOrderProduct[];
     totalPrice: number;
-    status: "Pending" |"Paid" |"Shipped" | "Completed" | "Cancelled"; 
+    status: string; 
     createdAt: string;
     updatedAt: string;
     __v?: number;

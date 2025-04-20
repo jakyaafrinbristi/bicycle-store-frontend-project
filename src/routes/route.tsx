@@ -40,11 +40,11 @@ const routes =createBrowserRouter([
             },
             {
                 path:"order",
-                element:<Contact></Contact>
+                element:<ProtectecRoute><Contact></Contact></ProtectecRoute>
             },
             {
                 path:"bicycle/:id",
-                element:<ProductDetails></ProductDetails>
+                element:<ProtectecRoute><ProductDetails></ProductDetails></ProtectecRoute>
             },
             {
                 path:"/checkout",
