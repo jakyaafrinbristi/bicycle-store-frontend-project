@@ -25,13 +25,14 @@ export const Login = () => {
   console.log({location})
   const dispatch =useAppDispatch()
   const {register,handleSubmit} = useForm({
-    defaultValues: {
-      email: "jakya@gmail.com",
-      password: "Test@1234",
-    },
+    // defaultValues: {
+    //   email: "jakya@gmail.com",
+    //   password: "Test@1234",
+    // },
   });
   const [login]=useLoginMutation()
   console.log(login)
+  
   // console.log(" error=> ",error)
   const onSubmit =async(data :FieldValues)=>{
     const toastId=toast.loading('Logging in')
