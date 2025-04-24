@@ -16,6 +16,7 @@ type FormValues = {
   email: string;
   address: string; 
   password: string;
+  image: string;  // Add image field to the form values
 };
 
 export const Register = () => {
@@ -31,8 +32,9 @@ export const Register = () => {
         name: data.name,
         phone: data.phone,
         email: data.email,
-        address: data.address, // Pass address to the API
+        address: data.address,
         password: data.password,
+        image: data.image,  // Include the image URL in the registration data
       };
 
       await registerUser(userInfo).unwrap();
@@ -87,11 +89,22 @@ export const Register = () => {
           <Input id="password" type="password" placeholder="Enter your password" {...register("password")} />
         </div>
 
+        {/* Image URL Input Field */}
+        <div className="space-y-2">
+          <Label htmlFor="image">Profile Image URL:</Label>
+          <Input
+            id="image"
+            type="text"
+            placeholder="Enter your image URL"
+            {...register("image")}  // Register the image URL field
+          />
+        </div>
+
         <Button type="submit" className="w-full bg-teal-500 hover:bg-teal-700">
           Register
         </Button>
         <p className="px-6 text-sm text-center">
-          Don't have an account yet? <Link to="/login" className="hover:underline dark:text-violet-600">Sign In</Link>.
+          Don't have an account yet? <Link to="/login" className="hover:underline dark:text-violet-600">Sign In</Link> .
         </p>
       </form>
 
