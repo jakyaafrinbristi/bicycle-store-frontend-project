@@ -20,6 +20,7 @@ import { adminPaths } from "./admin.routes";
 import { customerPaths } from "./customer.routes";
 import CheckOutpage from "@/components/CheckOutpage";
 import CreateTestimonial from "@/pages/CreateTestimonial";
+import ContactUs from "@/pages/ContactUs";
 
 
 const routes =createBrowserRouter([
@@ -46,6 +47,11 @@ const routes =createBrowserRouter([
             {
                 path:"testimonial",
                 element:<CreateTestimonial></CreateTestimonial>
+
+            },
+            {
+                path:"contact-us",
+                element:<ContactUs></ContactUs>
 
             },
             {

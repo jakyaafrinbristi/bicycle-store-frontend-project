@@ -13,7 +13,7 @@ export function Footer() {
     <footer className="bg-gray-100 dark:bg-gray-900 text-black dark:text-white pt-12 pb-6 shadow-inner mt-16">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-10 items-center text-center lg:text-left">
         
-        {/* Logo Section */}
+    
         <div>
           <h2 className="text-3xl font-bold text-teal-600 mb-2">Bicycle Store</h2>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
@@ -21,7 +21,7 @@ export function Footer() {
           </p>
         </div>
 
-        {/* Links Section */}
+  
         <div className="space-y-2">
           <h4 className="text-lg font-semibold mb-2">Quick Links</h4>
           <div className="flex flex-col gap-2">
@@ -31,13 +31,13 @@ export function Footer() {
             <Link to="/about" className="flex items-center justify-center lg:justify-start gap-2 hover:text-teal-500 transition">
               <FaInfoCircle /> About
             </Link>
-            <Link to="/contact" className="flex items-center justify-center lg:justify-start gap-2 hover:text-teal-500 transition">
-              <FaPhoneAlt /> Contact
+            <Link to="/contact-us" className="flex items-center justify-center lg:justify-start gap-2 hover:text-teal-500 transition">
+              <FaPhoneAlt />Contact
             </Link>
           </div>
         </div>
 
-        {/* Social Media Section */}
+     
         <div>
           <h4 className="text-lg font-semibold mb-2">Follow Us</h4>
           <div className="flex justify-center lg:justify-start space-x-4">

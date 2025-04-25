@@ -35,7 +35,7 @@ const CreateTestimonial = () => {
     return (
       <div className="max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg mt-10">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">
-          Submit Your Testimonial
+          Submit Your Reviews
         </h2>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
   

@@ -28,6 +28,7 @@ export default function Navbar() {
     { name: "All Bicycle", path: "/all-bicycle" },
     { name: "Order", path: "/order" },
     { name: "Reviews", path: "/testimonial" },
+    { name: "Contact", path: "/contact-us" },
   ];
 
   return (
