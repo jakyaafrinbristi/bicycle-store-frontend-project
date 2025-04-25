@@ -62,7 +62,7 @@ export default function ManageOrder() {
           {data?.data?.map((order: IOrder) => (
          
             <TableRow key={order._id}>
-              <TableCell>{order.user.email}</TableCell>
+              <TableCell>{order.user?.email}</TableCell>
               <TableCell>
                 {order.products.map((p) => (
                   <div key={p._id}>

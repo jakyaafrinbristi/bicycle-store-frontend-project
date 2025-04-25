@@ -56,36 +56,36 @@ const ManageProfile = () => {
       {/* Profile Update Form with Image on Right */}
       <div className="border p-4 rounded-lg shadow flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
         <form onSubmit={handleProfileSubmit} className="flex-1 space-y-4 w-full">
-          <h3 className="text-xl font-medium">Update Profile</h3>
+          <h3 className="text-xl font-medium text-teal-600">Update Profile</h3>
           <input
             type="text"
             placeholder="Name"
             value={profileData.name}
             onChange={(e) => setProfileData({ ...profileData, name: e.target.value })}
-            className="input input-bordered w-full"
+            className="input input-bordered w-full border-teal-500 focus:ring-teal-500"
           />
           <input
             type="email"
             placeholder="Email"
             value={profileData.email}
             readOnly
-            className="input input-bordered w-full bg-gray-100"
+            className="input input-bordered w-full bg-gray-100 border-teal-500 focus:ring-teal-500"
           />
           <input
             type="text"
             placeholder="Address"
             value={profileData.address}
             onChange={(e) => setProfileData({ ...profileData, address: e.target.value })}
-            className="input input-bordered w-full"
+            className="input input-bordered w-full border-teal-500 focus:ring-teal-500"
           />
           <input
             type="text"
             placeholder="Role"
             value={profileData.role}
             readOnly
-            className="input input-bordered w-full bg-gray-100"
+            className="input input-bordered w-full bg-gray-100 border-teal-500 focus:ring-teal-500"
           />
-          <button type="submit" className="btn btn-primary w-full">
+          <button type="submit" className="btn btn-teal w-full">
             Update Profile
           </button>
         </form>
@@ -94,29 +94,29 @@ const ManageProfile = () => {
           <img
             src={user?.image || "default-profile-image.jpg"}
             alt="Profile"
-            className="w-28 h-28 rounded-full object-cover border-2 border-teal-500"
+            className="w-28 h-28 rounded-full object-cover border-4 border-teal-500 shadow-lg"
           />
         </div>
       </div>
 
       {/* Password Change Form */}
       <form onSubmit={handlePasswordSubmit} className="space-y-4 border p-4 rounded-lg shadow">
-        <h3 className="text-xl font-medium">Change Password</h3>
+        <h3 className="text-xl font-medium text-teal-600">Change Password</h3>
         <input
           type="password"
           placeholder="Current Password"
           value={passwordData.currentPassword}
           onChange={(e) => setPasswordData({ ...passwordData, currentPassword: e.target.value })}
-          className="input input-bordered w-full"
+          className="input input-bordered w-full border-teal-500 focus:ring-teal-500"
         />
         <input
           type="password"
           placeholder="New Password"
           value={passwordData.newPassword}
           onChange={(e) => setPasswordData({ ...passwordData, newPassword: e.target.value })}
-          className="input input-bordered w-full"
+          className="input input-bordered w-full border-teal-500 focus:ring-teal-500"
         />
-        <button type="submit" className="btn btn-accent w-full">
+        <button type="submit" className="btn btn-teal w-full">
           Change Password
         </button>
       </form>

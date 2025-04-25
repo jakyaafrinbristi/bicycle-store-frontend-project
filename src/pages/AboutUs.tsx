@@ -3,33 +3,38 @@ import AboutImage2 from "../assets/images/about2-unsplash.jpg";
 
 export const AboutUs = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 container mx-auto mt-10 gap-8 px-5 mb-28">
-      
-      {/* Image Section */}
-      <div className="relative flex justify-center lg:justify-end">
-        <img
-          className="w-full lg:w-3/4 rounded-tr-2xl rounded-bl-2xl"
-          src={AboutImage1}
-          alt="About Image 1"
-        />
-        <div className="w-[60vw] sm:w-[40vw] md:w-[30vw] lg:w-[25vw] absolute left-5 -bottom-20 hidden xl:block">
+    <div className="container mx-auto mt-20 px-4 mb-28">
+      <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-10">
+
+        <div className="relative flex justify-center lg:justify-end">
           <img
-            className="rounded-tr-2xl rounded-bl-2xl border-t-8 border-r-8 border-t-white border-r-white shadow-lg"
-            src={AboutImage2}
-            alt="About Image 2"
+            className="w-full lg:w-4/5 rounded-2xl shadow-xl"
+            src={AboutImage1}
+            alt="About Image 1"
           />
+          <div className="absolute -bottom-16 -left-6 hidden xl:block">
+            <img
+              className="w-[250px] rounded-2xl border-8 border-white shadow-2xl"
+              src={AboutImage2}
+              alt="About Image 2"
+            />
+          </div>
+        </div>
+
+     
+        <div className="text-center lg:text-left space-y-6">
+          <h2 className="text-4xl font-extrabold text-gray-800">
+           About Our Bicycle
+          </h2>
+          <div className="w-24 h-1 bg-teal-500 mx-auto lg:mx-0 mb-3" />
+          <p className="text-gray-800 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Welcome to <span className="font-semibold text-teal-600">Bicycle Store</span>, your trusted companion on every journey. Whether you're cruising city streets or tackling rugged trails, we’re here to empower your ride.
+          </p>
+          <p className="text-gray-800 text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            We believe in cycling as a way of life — a healthier, more sustainable, and joyful path forward. Our collection is curated to blend performance with style, giving you the freedom to explore.
+          </p>
         </div>
       </div>
-
-      {/* Text Section */}
-      <div className="flex flex-col justify-center text-center lg:text-left">
-        <h1 className="font-bold text-2xl underline mb-5 text-center">About Us</h1>
-        <p className="max-w-3xl mx-auto lg:mx-0 px-6 font-semibold text-gray-500">
-        Welcome to Bicycle Store, your one-stop destination for premium bicycles and accessories. We are passionate about cycling and committed to providing top-quality bikes for riders of all levels.
-         Our mission is to inspire a healthier and more sustainable lifestyle through cycling.
-        </p>
-      </div>
-      
     </div>
   );
 };

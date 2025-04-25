@@ -126,11 +126,11 @@ export default function ManageProducts() {
     <div className="admin-dashboard p-6 bg-gray-50 min-h-screen">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Product Management</h1>
       
-       {/* dialog for add product */}
+    
        <Dialog open={isCreateDialogOpen} onOpenChange={setCreateDialogOpen}>
         <DialogTrigger asChild>
           <Button
-            className="mb-6 bg-blue-600 hover:bg-blue-700 text-white"
+            className="mb-6 bg-teal-600 hover:bg-teal-700 text-white"
             onClick={() => {
               setCreateDialogOpen(true);
             }}
@@ -153,7 +153,7 @@ export default function ManageProducts() {
             onSubmit={createHandleSubmit(handleCreateProduct)}
             className="space-y-4"
           >
-            {/* Product Input Fields */}
+
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">Product Name:</label>
               <input
@@ -176,12 +176,12 @@ export default function ManageProducts() {
             </div>
 
             <div className="space-y-2">
-  {/* লেবেল যোগ করা হয়েছে */}
+
   <label htmlFor="category" className="block text-sm font-medium text-gray-700">
     Product Category
   </label>
   
-  {/* আপনার সিলেক্ট এলিমেন্ট */}
+
   <select
     id="category"
     {...createRegister("category")}
@@ -245,7 +245,7 @@ export default function ManageProducts() {
               </Button>
               <Button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white"
+                className="bg-teal-600 hover:bg-teal-700 text-white"
                 disabled={isCreating}
               >
                 {isCreating ? "Saving..." : "Create Product"}
@@ -255,7 +255,7 @@ export default function ManageProducts() {
         </DialogContent>
       </Dialog>
 
-       {/* Dialog for Edit Product */}
+
        <Dialog open={isEditDialogOpen} onOpenChange={setEditDialogOpen}>
         <DialogContent className="max-w-[400px] bg-white rounded-lg max-h-[80vh] overflow-y-auto">
           <DialogHeader>
@@ -271,7 +271,7 @@ export default function ManageProducts() {
             onSubmit={editHandleSubmit(handleUpdateProduct)}
             className="space-y-4"
           >
-            {/* Product Input Fields */}
+     
             <div className="space-y-2">
               <label htmlFor="name" className="block text-sm font-medium text-gray-700">Product Name:</label>
               <input
@@ -355,7 +355,7 @@ export default function ManageProducts() {
               </Button>
               <Button
                 type="submit"
-                className="bg-blue-600 hover:bg-blue-700 text-white"
+                className="bg-teal-600 hover:bg-teal-700 text-white"
                 disabled={isUpdating}
               >
                 {isUpdating ? "Saving..." : "Update Product"}
@@ -393,8 +393,8 @@ export default function ManageProducts() {
             </button>
             <button 
                   onClick={() => handleEdit(product)}
-             className="p-2 hover:bg-blue-50 rounded-full">
-            <FaEdit className="text-blue-500" />
+             className="p-2 hover:bg-teal-50 rounded-full">
+            <FaEdit className="text-teal-500" />
 
             </button>
           </div>

@@ -19,6 +19,7 @@ import { routesGenerator } from "@/utils/routeGenerator";
 import { adminPaths } from "./admin.routes";
 import { customerPaths } from "./customer.routes";
 import CheckOutpage from "@/components/CheckOutpage";
+import CreateTestimonial from "@/pages/CreateTestimonial";
 
 
 const routes =createBrowserRouter([
@@ -41,6 +42,11 @@ const routes =createBrowserRouter([
             {
                 path:"order",
                 element:<ProtectecRoute><Contact></Contact></ProtectecRoute>
+            },
+            {
+                path:"testimonial",
+                element:<CreateTestimonial></CreateTestimonial>
+
             },
             {
                 path:"bicycle/:id",
