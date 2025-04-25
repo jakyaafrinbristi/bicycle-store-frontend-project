@@ -56,11 +56,11 @@ const routes =createBrowserRouter([
             },
             {
                 path:"bicycle/:id",
-                element:<ProtectecRoute><ProductDetails></ProductDetails></ProtectecRoute>
+                element:<ProductDetails></ProductDetails>
             },
             {
                 path:"/checkout",
-                element:<CheckOutpage></CheckOutpage>
+                element:<ProtectecRoute><CheckOutpage></CheckOutpage></ProtectecRoute>
             },
 
         ]

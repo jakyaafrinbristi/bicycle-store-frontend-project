@@ -80,7 +80,7 @@ Bicycle Store is an e-commerce application that allows users to browse, order, a
 ---
 
 ## How to Run Locally
-
+ 
 ### **Frontend**
 
 1. Clone the frontend repository:
