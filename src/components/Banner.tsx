@@ -8,7 +8,7 @@ import { Link } from "react-router";
 
 import image1 from "../assets/images/Banner1-unsplash.jpg";
 import image2 from "../assets/images/banner-4-unsplash.jpg";
-import image3 from "../assets/images/Banner-5-unsplash.jpg";
+import image3 from "../assets/images/banner-5-unsplash.jpg";
 
 const images = [image1, image2, image3];
 

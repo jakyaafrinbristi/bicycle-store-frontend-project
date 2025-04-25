@@ -42,7 +42,7 @@ export default function ManageUser() {
     {
       title: 'Action',
       key: 'action',
-      render: (text: any, user: IUser) => (
+      render: (_: any, user: IUser) => (
         <Button
           type="default"
           onClick={() => deactivateUser(user._id)}

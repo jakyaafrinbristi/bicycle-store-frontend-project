@@ -23,7 +23,7 @@ const CreateTestimonial = () => {
           image: user?.image,
           rating: Number(data.rating),
         };
-        const res = await createTestimonial(payload).unwrap();
+       await createTestimonial(payload).unwrap();
         toast.success("Testimonial submitted!");
         reset();
         navigate("/")
