@@ -15,10 +15,10 @@ Bicycle Store is an e-commerce application that allows users to browse, order, a
 
 ## Tech Stack
 
-- **Frontend**: React, Redux, Tailwind CSS, ShadCN/UI
-- **Backend**: Node.js, Express, MongoDB
+- **Frontend**:  Redux,RTK query, Tailwind CSS, ShadCN/UI
+- **Backend**: Node.js, Express, MongoDB,mongoose
 - **Authentication**: JWT (JSON Web Token)
-- **Payment Integration**: SurjoPay, Stripe (or other options)
+- **Payment Integration**: SurjoPay
 
 ---
 
@@ -74,7 +74,7 @@ Bicycle Store is an e-commerce application that allows users to browse, order, a
 - **Database**: MongoDB with collections for Users, Bicycles, and Orders.
 - **Authentication**: JWT token-based login system with hashed passwords.
 - **CRUD Operations**: For bicycles and orders.
-- **Payment Integration**: SurjoPay, Stripe, or other payment methods.
+- **Payment Integration**: SurjoPay methods.
 - **Error Handling**: Consistent error messages and proper validation.
 
 ---
@@ -94,7 +94,7 @@ Bicycle Store is an e-commerce application that allows users to browse, order, a
    ```
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ### **Backend**
@@ -110,7 +110,7 @@ Bicycle Store is an e-commerce application that allows users to browse, order, a
    ```
 3. Start the backend server:
    ```bash
-   npm start
+   npm dev
    ```
 
 ---
