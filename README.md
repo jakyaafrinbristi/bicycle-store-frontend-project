@@ -1,54 +1,116 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Bicycle Store
 
-## Expanding the ESLint configuration
+## Project Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Bicycle Store is an e-commerce application that allows users to browse, order, and manage bicycles with secure authentication and a responsive design. The application provides a role-based dashboard for admins and customers, integrated payment gateways, and efficient product management functionalities.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### **Live Link**
+[View the live project here](https://bicycle-store-frontend-project.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Tech Stack
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Frontend**: React, Redux, Tailwind CSS, ShadCN/UI
+- **Backend**: Node.js, Express, MongoDB
+- **Authentication**: JWT (JSON Web Token)
+- **Payment Integration**: SurjoPay, Stripe (or other options)
+
+---
+
+## Features
+
+### **User Registration & Authentication (Role-Based)**
+
+- **Secure Registration & Login**: Users can register and log in with email and password. Admin roles can be manually updated.
+- **JWT**: Secure user authentication via JWT tokens, stored in local storage.
+- **Logout**: Removes the JWT from local storage and redirects the user to the login page.
+
+### **Public Routes**
+
+1. **Home Page**: 
+   - **Navbar** with logo, navigation, and login/signup buttons.
+   - **Featured Bicycles** showcasing popular models with a "View All" button.
+   - **Extra Section** with testimonials or e-commerce-related content.
+   - **Footer** with contact and social media links.
+   
+2. **All Bicycles Page**:
+   - **Search & Filters** to browse by brand, price, category, etc.
+   - **Dynamic Results** with real-time updates based on search queries or selected filters.
+   - **Bicycle Cards** showcasing key details like name, model, and price.
+
+3. **Bicycle Details Page**: 
+   - Display detailed bicycle information and an option to proceed to the checkout page.
+
+4. **About Page**: 
+   - Details about the bicycle shop and its mission.
+
+### **Private Routes**
+
+1. **Checkout Page**:
+   - Users can place orders for bicycles with payment integration.
+   - **Order Form** includes product, user details, and payment method.
+   - **Payment Integration** using SurjoPay, Stripe, or other gateways.
+
+2. **Dashboard** (Role-Based Access):
+   - **Admin Dashboard** for managing users, products, and orders (CRUD operations).
+   - **User Dashboard** for viewing orders and managing profiles.
+
+### **UI/UX Design**
+
+- **Responsive Design**: Optimized for different screen sizes.
+- **Error Handling**: User-friendly error messages for invalid login, out-of-stock products, etc.
+- **Loading States**: Loaders or spinners during API calls.
+- **Toasts**: Notifications for actions like successful login or placed orders.
+
+---
+
+## Backend Requirements
+
+- **Database**: MongoDB with collections for Users, Bicycles, and Orders.
+- **Authentication**: JWT token-based login system with hashed passwords.
+- **CRUD Operations**: For bicycles and orders.
+- **Payment Integration**: SurjoPay, Stripe, or other payment methods.
+- **Error Handling**: Consistent error messages and proper validation.
+
+---
+
+## How to Run Locally
+
+### **Frontend**
+
+1. Clone the frontend repository:
+   ```bash
+   git clone https://github.com/jakyaafrinbristi/bicycle-store-frontend-project
+   ```
+2. Install dependencies:
+   ```bash
+   cd bicycle-store-frontend-project
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm start
+   ```
+
+### **Backend**
+
+1. Clone the backend repository:
+   ```bash
+   git clone https://github.com/jakyaafrinbristi/bi-cycle-store
+   ```
+2. Install dependencies:
+   ```bash
+   cd bi-cycle-store
+   npm install
+   ```
+3. Start the backend server:
+   ```bash
+   npm start
+   ```
+
+---
