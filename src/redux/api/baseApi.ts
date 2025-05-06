@@ -3,8 +3,8 @@ import {  createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { RootState } from "../store";
 
 
-// const baseQuery =fetchBaseQuery({baseUrl:"http://localhost:9000/api",
-const baseQuery =fetchBaseQuery({baseUrl:"https://bi-cycle-store-deploy.vercel.app/api",
+const baseQuery =fetchBaseQuery({baseUrl:"http://localhost:9000/api",
+// const baseQuery =fetchBaseQuery({baseUrl:"https://bi-cycle-store-deploy.vercel.app/api",
     credentials: "include",
     prepareHeaders:(headers,{getState}) =>{
         const token = (getState() as RootState).auth.token;
