@@ -42,7 +42,7 @@ const Newsletter = () => {
       Join our community of subscribers who receive exclusive content, early access to new features, 
       and special offers straight to their inbox.
       </p>
-       <div className="container mx-auto bg-gradient-to-r from-teal-50 to-teal-100 dark:from-teal-700 dark:to-teal-800 rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
+       <div className="container mx-auto bg-teal-50 dark:from-teal-700 dark:to-teal-800 rounded-xl shadow-lg p-6 md:p-8 lg:p-10">
        <div className="max-w-2xl mx-auto text-center">
          <h2 className="text-2xl md:text-3xl font-bold text-teal-800 dark:text-teal-100 mb-4">
            Subscribe to Our Newsletter

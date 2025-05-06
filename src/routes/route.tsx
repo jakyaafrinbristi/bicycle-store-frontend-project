@@ -21,6 +21,7 @@ import { customerPaths } from "./customer.routes";
 import CheckOutpage from "@/components/CheckOutpage";
 import CreateTestimonial from "@/pages/CreateTestimonial";
 import ContactUs from "@/pages/ContactUs";
+import BicycleBlogs from "@/pages/BicycleBlogs";
 
 
 const routes =createBrowserRouter([
@@ -52,6 +53,11 @@ const routes =createBrowserRouter([
             {
                 path:"contact-us",
                 element:<ContactUs></ContactUs>
+
+            },
+            {
+                path:"blog",
+                element:<BicycleBlogs></BicycleBlogs>
 
             },
             {

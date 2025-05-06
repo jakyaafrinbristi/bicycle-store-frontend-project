@@ -4,6 +4,7 @@ import FeaturedBicycles from "./FeaturedBicycles"
 import Testimonial from "./Testimonial"
 import { OfferSection } from "@/components/OfferSection"
 import Newsletter from "./NewsLetter"
+import SingleBlogHighlight from "@/components/blog"
 
 
 
@@ -13,9 +14,10 @@ export const Home = () => {
       <Banner></Banner>
       <AboutUs></AboutUs>
  <FeaturedBicycles></FeaturedBicycles>
- <Testimonial></Testimonial>
  <OfferSection></OfferSection>
+ <SingleBlogHighlight></SingleBlogHighlight>
  <Newsletter></Newsletter>
+ <Testimonial></Testimonial>
 
     </div>
 
