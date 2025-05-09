@@ -28,9 +28,17 @@ const offers = [
 export const OfferSection = () => {
   return (
     <section className="py-16 bg-white-100 dark:bg-gray-900">
-      <h2 className="text-4xl font-bold text-center text-gray-800 dark:text-white mb-12">
-        🔥 Our Latest Offers
-      </h2>
+   <div className="text-center mb-12">
+          <span className="inline-block px-3 py-1 text-sm font-medium rounded-full bg-teal-100 text-teal-800 dark:bg-teal-900/50 dark:text-teal-200 mb-4">
+            Limited Time Offers
+          </span>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-3">
+            Exclusive Deals Just For You
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Don't miss out on these special promotions to upgrade your ride
+          </p>
+        </div>
       
       <Marquee speed={100} gradient={false} pauseOnHover>
         {offers.map((offer, index) => (

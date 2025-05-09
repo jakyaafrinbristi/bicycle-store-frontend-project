@@ -6,6 +6,8 @@ import { OfferSection } from "@/components/OfferSection"
 import Newsletter from "./NewsLetter"
 import SingleBlogHighlight from "@/components/blog"
 
+import CategorySection from "@/components/Category"
+
 
 
 export const Home = () => {
@@ -16,6 +18,7 @@ export const Home = () => {
  <FeaturedBicycles></FeaturedBicycles>
  <OfferSection></OfferSection>
  <SingleBlogHighlight></SingleBlogHighlight>
+<CategorySection></CategorySection>
  <Newsletter></Newsletter>
  <Testimonial></Testimonial>
 

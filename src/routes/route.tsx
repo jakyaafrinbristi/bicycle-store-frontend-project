@@ -22,6 +22,7 @@ import CheckOutpage from "@/components/CheckOutpage";
 import CreateTestimonial from "@/pages/CreateTestimonial";
 import ContactUs from "@/pages/ContactUs";
 import BicycleBlogs from "@/pages/BicycleBlogs";
+import { MeetOurTeam } from "@/components/MeetOurTeam";
 
 
 const routes =createBrowserRouter([
@@ -58,6 +59,11 @@ const routes =createBrowserRouter([
             {
                 path:"blog",
                 element:<BicycleBlogs></BicycleBlogs>
+
+            },
+            {
+                path:"meet",
+                element:<MeetOurTeam></MeetOurTeam>
 
             },
             {
