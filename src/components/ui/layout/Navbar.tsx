@@ -26,7 +26,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "All Bicycle", path: "/all-bicycle" },
-    { name: "Order", path: "/order" },
+    // { name: "Order", path: "/order" },
     { name: "Reviews", path: "/testimonial" },
     { name: "Blogs", path: "/blog" },
     { name: "Contact", path: "/contact-us" },

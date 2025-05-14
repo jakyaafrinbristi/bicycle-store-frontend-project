@@ -14,7 +14,7 @@ import ManageUser from "@/pages/Admin/AdminDAshboard/ManageUsers";
 
 export const  adminPaths =[
     {
-        name: 'Dashboard',
+        name: 'OverView',
         path: 'dashboard',
         element:<AdminDasboard></AdminDasboard>
     

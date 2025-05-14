@@ -24,8 +24,8 @@ const FeaturedBicycles = () => {
   const products = data?.data || [];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-20 lg:py-24">
-      <div className="text-center mb-16">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 ">
+      <div className="text-center mb-10">
         <div className="inline-flex items-center justify-center w-14 h-14 bg-teal-100 dark:bg-teal-900/50 rounded-full mb-5">
           <FiStar className="text-2xl text-teal-600 dark:text-teal-400" />
         </div>
